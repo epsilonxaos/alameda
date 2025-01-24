@@ -4,7 +4,7 @@ export const Logo = ({ className = '' }) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		viewBox='0 0 213 38'
-		className={cn('fill-azulRey w-40', className)}>
+		className={cn('w-40 fill-azulRey', className)}>
 		<path d='M37.42,38a3.46,3.46,0,0,1,0-6.92,3.48,3.48,0,0,1,2.61,1l-.75.87a2.66,2.66,0,0,0-1.87-.83,2.39,2.39,0,0,0,0,4.76,2.62,2.62,0,0,0,1.91-.87l.76.76A3.44,3.44,0,0,1,37.42,38' />
 		<rect
 			x={50.97}
@@ -71,5 +71,23 @@ export const IsotipoCircle = ({ className = '', classNamePaths = '', classNameCi
 				/>
 			</g>
 		</g>
+	</svg>
+)
+
+export const Play = ({ className = '' }) => (
+	<svg
+		className={cn('w-28', className)}
+		xmlns='http://www.w3.org/2000/svg'
+		viewBox='0 0 78 78'>
+		<circle
+			cx='39'
+			cy='39'
+			r='39'
+			fill='#D9D9D9'
+		/>
+		<path
+			d='M30.1364 58.5V19.5L54.9545 40.7727L30.1364 58.5Z'
+			fill='#B8BE14'
+		/>
 	</svg>
 )
