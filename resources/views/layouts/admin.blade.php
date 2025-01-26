@@ -35,6 +35,7 @@
         }
     </style>
     @stack('style')
+    @livewireStyles
 </head>
 
 <body class="font-sans text-gray-900 bg-slate-100 antialiased">
@@ -61,11 +62,9 @@
 
     <script src="{{ asset('plugins/jquery/jquery-3.7.0.min.js') }}"></script>
     <script src="{{ asset('plugins/dropify/js/dropify.min.js') }}"></script>
-    @vite([
-		'resources/js/panel/index.js'
-		'resources/js/panel/trumbowygInit.js'
-	])
+    @vite(['resources/js/panel/index.js'])
     @stack('script')
+    @livewireScripts
 </body>
 
 </html>
