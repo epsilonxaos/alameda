@@ -1,8 +1,9 @@
 import AboutGallery from './AboutGallery'
 import AboutSection from './AboutSection'
-import Amenities from './Amenities/Amenities'
 import Croquis from './Croquis'
 import MainBanner from './MainBanner'
+import Masterplan from './Masterplan'
+import TownHouse from './TownHouse/TownHouse'
 import Video from './Video'
 
 const Index = () => {
@@ -13,7 +14,8 @@ const Index = () => {
 			<AboutGallery />
 			<Croquis />
 			<Video />
-			<Amenities />
+			<TownHouse />
+			<Masterplan />
 		</>
 	)
 }
