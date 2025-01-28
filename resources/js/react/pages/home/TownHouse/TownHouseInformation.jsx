@@ -21,7 +21,7 @@ const ListText = [
 	'Preparados para instalación de aire acondicionado en recámaras, sala y comedor.',
 ]
 
-const TownHouse = () => {
+const TownHouseInformation = () => {
 	return (
 		<div className='bg-verdeLimon/50'>
 			<Container>
@@ -62,4 +62,4 @@ const TownHouse = () => {
 	)
 }
 
-export default TownHouse
+export default TownHouseInformation

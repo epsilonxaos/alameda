@@ -1,11 +1,11 @@
 import Incluye from './Incluye'
 import Opciones from './Opciones'
-import TownHouse from './Townhose'
+import TownHouseInformation from './TownHouseInformation'
 
 const Amenities = () => {
 	return (
 		<>
-			<TownHouse />
+			<TownHouseInformation />
 			<Incluye />
 			<Opciones />
 		</>
