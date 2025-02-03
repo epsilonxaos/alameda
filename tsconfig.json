@@ -21,7 +21,15 @@
 		"noUnusedParameters": true, // Report errors on unused parameters in functions
 		"outDir": "lib", // .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory.,
 		"paths": {
-			"@/*": ["resources/js/react"]
+			"#types/*": ["./resources/js/react/types/*"],
+			"@assets/*": ["./resources/js/react/assets/*"],
+			"@components/*": ["./resources/js/react/components/*"],
+			"@contexts/*": ["./resources/js/react/contexts/*"],
+			"@modules/*": ["./resources/js/react/modules/*"],
+			"@pages/*": ["./resources/js/react/pages/*"],
+			"@routes/*": ["./resources/js/react/routes/*"],
+			"@services/*": ["./resources/js/react/services/*"],
+			"@utils/*": ["./resources/js/react/utils/*"]
 		},
 		"removeComments": true, // Strips all comments from TypeScript files when converting into JavaScript- you rarely read compiled code so this saves space
 		"resolveJsonModule": true,
