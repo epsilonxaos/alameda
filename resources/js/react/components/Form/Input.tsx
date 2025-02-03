@@ -40,7 +40,7 @@ const InputIcon = props => {
 			<div className='relative'>
 				<div
 					className={twMerge(
-						`pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 text-xl text-default-500 dark:text-default-300 ${className.icon}`
+						`text-default-500 dark:text-default-300 pointer-events-none absolute inset-y-0 left-0 flex items-center justify-center pl-3 text-xl ${className.icon}`
 					)}>
 					{icon}
 				</div>
@@ -50,7 +50,7 @@ const InputIcon = props => {
 					{...{ name }}
 					{...{ placeholder }}
 					className={twMerge(
-						`border-1 h-[32px] w-full appearance-none rounded border border-default-300 bg-white p-0.5 pl-10 text-base text-default-900 transition-all focus:border-primary-500 focus:ring-primary-500 disabled:border-neutral-100 disabled:bg-neutral-100 dark:border-default-600 dark:bg-default-800 dark:text-white dark:placeholder-default-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 dark:disabled:border-gray-700 dark:disabled:bg-default-800 dark:disabled:opacity-60 ${className.input}`
+						`border-1 border-default-300 text-default-900 focus:border-primary-500 focus:ring-primary-500 dark:border-default-600 dark:bg-default-800 dark:placeholder-default-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 dark:disabled:bg-default-800 h-[32px] w-full appearance-none rounded border bg-white p-0.5 pl-10 text-base transition-all disabled:border-neutral-100 disabled:bg-neutral-100 dark:text-white dark:disabled:border-gray-700 dark:disabled:opacity-60 ${className.input}`
 					)}
 					{...{ disabled }}
 					{...(handlerChange && { onChange: handlerChange })}
@@ -65,7 +65,7 @@ const InputIcon = props => {
 					{...(validationStyleError && { style: styleError })}
 				/>
 			</div>
-			{validationMessageError && <p className='small font-medium text-error'>{validationMessageError}</p>}
+			{validationMessageError && <p className='small text-error font-medium'>{validationMessageError}</p>}
 		</>
 	)
 }
@@ -128,7 +128,7 @@ function Input({
 				type={type}
 				placeholder={placeholder}
 				className={twMerge(
-					`border-1 h-[32px] w-full appearance-none rounded border border-default-300 bg-white p-1.5 text-base text-default-900 transition-all focus:border-primary-500 focus:ring-primary-500 disabled:border-neutral-100 disabled:bg-neutral-100 dark:border-default-600 dark:bg-default-800 dark:text-white dark:placeholder-default-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 dark:disabled:border-gray-700 dark:disabled:bg-default-800 dark:disabled:opacity-60`,
+					`border-1 border-default-300 text-default-900 focus:border-primary-500 focus:ring-primary-500 dark:border-default-600 dark:bg-default-800 dark:placeholder-default-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 dark:disabled:bg-default-800 h-[32px] w-full appearance-none rounded border bg-white p-1.5 text-base transition-all disabled:border-neutral-100 disabled:bg-neutral-100 dark:text-white dark:disabled:border-gray-700 dark:disabled:opacity-60`,
 					className
 				)}
 				{...(id && { id })}
@@ -141,7 +141,7 @@ function Input({
 				{...(validationStyleError && { style: styleError })}
 			/>
 
-			{validationMessageError && <p className='small font-medium text-error'>{validationMessageError}</p>}
+			{validationMessageError && <p className='small text-error font-medium'>{validationMessageError}</p>}
 		</>
 	)
 }
@@ -161,7 +161,7 @@ function InputMaterial(props) {
 	} = props
 
 	return (
-		<div className={twMerge(`relative z-0 w-full  ${className.container}`)}>
+		<div className={twMerge(`relative z-0 w-full ${className.container}`)}>
 			<input
 				type={type}
 				onChange={e => {
@@ -173,14 +173,14 @@ function InputMaterial(props) {
 				}}
 				name={`${id}`}
 				className={twMerge(
-					`border-1 peer text-paragraph block w-full appearance-none rounded border-gray-300 bg-transparent px-2 py-1 focus:border-primary-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:font-medium dark:focus:border-primary-500 ${className.input}`
+					`border-1 text-paragraph focus:border-primary-600 dark:focus:border-primary-500 peer block w-full appearance-none rounded border-gray-300 bg-transparent px-2 py-1 focus:outline-none focus:ring-0 dark:border-gray-600 dark:font-medium ${className.input}`
 				)}
 				placeholder=' '
 			/>
 			<label
 				htmlFor={id}
 				className={twMerge(
-					`text-paragraph absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-primary-600 dark:bg-default-800 peer-focus:dark:text-primary-500 ${className.label}`
+					`text-paragraph peer-focus:text-primary-600 dark:bg-default-800 peer-focus:dark:text-primary-500 absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 ${className.label}`
 				)}>
 				{label}
 			</label>
@@ -196,7 +196,7 @@ function InputCheckbox({ label = '', checked = false, className = '', handleChan
 				checked={checked}
 				onChange={handleChange}
 				className={twMerge(
-					'mr-2 h-4 w-4 appearance-none rounded border border-default-300 bg-white checked:bg-primary-600 focus:ring-transparent dark:checked:bg-primary-600',
+					'border-default-300 checked:bg-primary-600 dark:checked:bg-primary-600 mr-2 h-4 w-4 appearance-none rounded border bg-white focus:ring-transparent',
 					className
 				)}
 			/>
@@ -222,7 +222,7 @@ function InputRadio({
 				onChange={handleChange}
 				checked={checked}
 				disabled={disabled}
-				className='peer h-4 w-4 cursor-pointer border bg-white text-primary-500 focus:ring-transparent disabled:border-neutral-200 disabled:bg-neutral-100 dark:checked:bg-primary-500 dark:disabled:border-gray-600 dark:disabled:bg-gray-400'
+				className='text-primary-500 dark:checked:bg-primary-500 peer h-4 w-4 cursor-pointer border bg-white focus:ring-transparent disabled:border-neutral-200 disabled:bg-neutral-100 dark:disabled:border-gray-600 dark:disabled:bg-gray-400'
 			/>
 			{label && (
 				<label
