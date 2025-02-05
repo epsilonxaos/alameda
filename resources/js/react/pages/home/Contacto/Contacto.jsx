@@ -6,7 +6,7 @@ import Form from '@pages/home/Contacto/Form'
 const Contacto = () => {
 	return (
 		<Container>
-			<div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
+			<div className='grid grid-cols-1 gap-8 bg-red-400 md:grid-cols-2'>
 				<div className='order-2 col-span-1 md:order-1 md:py-14'>
 					<Logo className='mx-auto mb-[60px] w-[80%] max-w-[290px] fill-azulRey md:mb-[120px]' />
 

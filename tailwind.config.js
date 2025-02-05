@@ -1,13 +1,18 @@
-module.exports = {
+export default {
 	content: [
 		'./public/index.php',
 		'./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
 		'./storage/framework/views/*.php',
 		'./resources/**/*.blade.php',
-		'./resources/**/*.{js,ts,jsx,tsx}',
-		'./resources/js/react/**/*.{js,ts,jsx,tsx}',
-		'./resources/js/react/**/**/*.{js,ts,jsx,tsx}',
-		'./resources/js/react/**/**/**/*.{js,ts,jsx,tsx}',
+		'./resources/js/react/components/**/*.{js,jsx,ts,tsx}',
+		'./resources/js/react/components/*.{js,jsx,ts,tsx}',
+		'./resources/js/react/modules/**/*.{js,jsx,ts,tsx}',
+		'./resources/js/react/modules/*.{js,jsx,ts,tsx}',
+		'./resources/js/react/pages/**/*.{js,jsx,ts,tsx}',
+		'./resources/js/react/pages/*.{js,jsx,ts,tsx}',
+		'./resources/js/react/*.{js,jsx,ts,tsx}',
+		'./resources/js/*.{js,jsx,ts,tsx}',
+		'./resources/*.{js,jsx,ts,tsx}',
 		'./node_modules/flowbite/**/*.js',
 	],
 	darkMode: 'class',
