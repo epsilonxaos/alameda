@@ -1,6 +1,6 @@
-import IMG_Cover from '../../../../img/video-cover.webp'
-import Container from '../../components/Container'
-import { Play } from '../../components/Icons'
+import Container from '@components/Container'
+import { Play } from '@components/Icons'
+import IMG_Cover from '@img/video-cover.webp'
 
 const Video = () => {
 	return (

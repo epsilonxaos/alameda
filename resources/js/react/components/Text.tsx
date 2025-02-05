@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 
 import type { TClassName } from '../types/main'
 
-import { cn } from '../../utils/cn'
+import { cn } from '../utils/cn'
 
 const Text = ({
 	children,

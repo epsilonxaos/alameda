@@ -1,6 +1,6 @@
-import IMG_Croquis from '../../../../img/croquis.png'
-import Container from '../../components/Container'
-import Text from '../../components/Text'
+import Container from '@components/Container'
+import Text from '@components/Text'
+import IMG_Croquis from '@img/croquis.png'
 
 const Croquis = () => {
 	return (

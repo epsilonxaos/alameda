@@ -1,7 +1,7 @@
-import IMGMasterplan from '../../../../img/masterplan/masterplan.jpg'
-import Container from '../../components/Container'
-import { SVGMasterplan } from '../../components/Icons'
-import Text from '../../components/Text'
+import Container from '@components/Container'
+import { SVGMasterplan } from '@components/Icons'
+import Text from '@components/Text'
+import IMGMasterplan from '@img/masterplan/masterplan.jpg'
 
 const Masterplan = () => {
 	return (

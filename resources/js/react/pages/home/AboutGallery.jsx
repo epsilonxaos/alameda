@@ -1,10 +1,10 @@
-import IMG_cover1 from '../../../../img/alameda/1.webp'
-import IMG_cover2 from '../../../../img/alameda/2.webp'
-import IMG_cover3 from '../../../../img/alameda/3.webp'
-import IMG_cover4 from '../../../../img/alameda/4.webp'
-import IMG_cover5 from '../../../../img/alameda/5.webp'
-import Container from '../../components/Container'
-import Text from '../../components/Text'
+import Container from '@components/Container'
+import Text from '@components/Text'
+import IMG_cover1 from '@img/alameda/1.webp'
+import IMG_cover2 from '@img/alameda/2.webp'
+import IMG_cover3 from '@img/alameda/3.webp'
+import IMG_cover4 from '@img/alameda/4.webp'
+import IMG_cover5 from '@img/alameda/5.webp'
 
 const AboutGallery = () => {
 	return (

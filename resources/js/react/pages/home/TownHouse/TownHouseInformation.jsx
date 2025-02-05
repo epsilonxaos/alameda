@@ -1,12 +1,12 @@
-import IMG_1 from '../../../../../img/townhouse/1.webp'
-import IMG_2 from '../../../../../img/townhouse/2.webp'
-import IMG_3 from '../../../../../img/townhouse/3.webp'
-import IMG_4 from '../../../../../img/townhouse/4.webp'
-import IMG_5 from '../../../../../img/townhouse/5.webp'
-import IMG_6 from '../../../../../img/townhouse/6.webp'
-import Container from '../../../components/Container'
-import { Check } from '../../../components/Icons'
-import Text from '../../../components/Text'
+import Container from '@components/Container'
+import { Check } from '@components/Icons'
+import Text from '@components/Text'
+import IMG_1 from '@img/townhouse/1.webp'
+import IMG_2 from '@img/townhouse/2.webp'
+import IMG_3 from '@img/townhouse/3.webp'
+import IMG_4 from '@img/townhouse/4.webp'
+import IMG_5 from '@img/townhouse/5.webp'
+import IMG_6 from '@img/townhouse/6.webp'
 
 const ListText = [
 	'Dos plantas con dos recámaras, cada una con baño y clóset.',

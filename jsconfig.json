@@ -6,7 +6,8 @@
 		"jsx": "preserve",
 		"module": "ES2022",
 		"paths": {
-			"@/*": ["./resources/js/react/*"]
+			"@/*": ["./resources/js/react/*"],
+			"@img/*": ["./resources/js/react/img/*"]
 		}
 	},
 	"exclude": ["node_modules", "**/node_modules/*"],

@@ -1,6 +1,6 @@
-import IMGAbout from '../../../../img/img-about.webp'
-import Container from '../../components/Container'
-import Text from '../../components/Text'
+import Container from '@components/Container'
+import Text from '@components/Text'
+import IMGAbout from '@img/img-about.webp'
 
 const AboutSection = () => {
 	return (

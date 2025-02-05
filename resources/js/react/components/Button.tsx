@@ -1,14 +1,14 @@
+import { cn } from '@utils/cn'
+
+import type { TButton } from '#types/main'
+
 import { Link } from 'react-router-dom'
-
-import type { TButton } from '../types/main'
-
-import { cn } from '../../utils/cn'
 
 const Button = ({ children, onClick, type, className }: TButton) => {
 	return (
 		<button
 			type={type ?? 'button'}
-			className={cn('bg-azulRey font-apercuPro px-5 py-4 text-xs uppercase tracking-[1.2px] text-white', className)}
+			className={cn('font-apercuPro bg-azulRey px-5 py-4 text-xs uppercase tracking-[1.2px] text-white', className)}
 			onClick={onClick}>
 			{children}
 		</button>
@@ -21,7 +21,7 @@ const Url = ({ children, href, className }: TButton & { href: string }) => {
 			href={href}
 			target='_blank'
 			rel='noopener noreferrer'
-			className={cn('bg-azulRey font-apercuPro px-5 py-4 text-xs uppercase tracking-[1.2px] text-white', className)}>
+			className={cn('font-apercuPro bg-azulRey px-5 py-4 text-xs uppercase tracking-[1.2px] text-white', className)}>
 			{children}
 		</a>
 	)
@@ -41,7 +41,7 @@ const Navigation = ({
 	return (
 		<Link
 			to={to}
-			className={cn('bg-azulRey font-apercuPro px-5 py-4 text-xs uppercase tracking-[1.2px] text-white', className)}
+			className={cn('font-apercuPro bg-azulRey px-5 py-4 text-xs uppercase tracking-[1.2px] text-white', className)}
 			onClick={onClick}>
 			{children}
 		</Link>

@@ -25,6 +25,7 @@
 			"@assets/*": ["./resources/js/react/assets/*"],
 			"@components/*": ["./resources/js/react/components/*"],
 			"@contexts/*": ["./resources/js/react/contexts/*"],
+			"@img/*": ["./resources/js/react/img/*"],
 			"@modules/*": ["./resources/js/react/modules/*"],
 			"@pages/*": ["./resources/js/react/pages/*"],
 			"@routes/*": ["./resources/js/react/routes/*"],
