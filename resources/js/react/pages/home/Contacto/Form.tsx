@@ -1,3 +1,4 @@
+import Button from '@components/Button'
 import { cn } from '@utils/cn'
 
 import { useState } from 'react'
@@ -27,46 +28,68 @@ const Form = () => {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<div className='form-group'>
-				<Input />
-				<small>{errors.name}</small>
-			</div>
-			<div className='form-group'>
-				<label htmlFor='email'>Email</label>
-				<input
-					type='email'
-					id='email'
-					name='email'
-					value={email}
-					onChange={e => setEmail(e.target.value)}
+		<form
+			onSubmit={handleSubmit}
+			className='max-w-[570px]'>
+			<div className='form-group border-t border-t-azulRey/60'>
+				<Input
+					name={'nombre'}
+					placeholder='Nombre'
 				/>
-				<small>{errors.email}</small>
 			</div>
-			<div className='form-group'>
-				<label htmlFor='message'>Mensaje</label>
-				<textarea
-					id='message'
-					name='message'
-					value={message}
-					onChange={e => setMessage(e.target.value)}
+			<div className='form-group border-t border-t-azulRey/60'>
+				<Input
+					name={'apellido'}
+					placeholder='Apellido'
 				/>
-				<small>{errors.message}</small>
 			</div>
-			<button type='submit'>Enviar</button>
+			<div className='form-group border-t border-t-azulRey/60'>
+				<Input
+					name={'correo'}
+					placeholder='Correo electrónico'
+				/>
+			</div>
+			<div className='form-group border-t border-t-azulRey/60'>
+				<Input
+					name={'ciudad'}
+					placeholder='Ciudad'
+				/>
+			</div>
+			<div className='form-group border-y border-y-azulRey/60'>
+				<Input
+					name={'telefono'}
+					placeholder='Teléfono'
+				/>
+			</div>
+
+			<div className='pt-6 text-center md:pt-14'>
+				<Button className='mx-auto'>agendar videollamada</Button>
+			</div>
 		</form>
 	)
 }
 
-function Input({ name, label, register, validate = false, rules, validateError = '', validateErrorMessage = '' }) {
+function Input({
+	name,
+	placeholder,
+	register,
+	validate = false,
+	rules,
+	validateError = '',
+	validateErrorMessage = '',
+}) {
 	return (
 		<>
 			<input
 				{...(validate && register(name, rules))}
 				type='text'
+				placeholder={placeholder}
 				{...(!validate && { name })}
 				id={name}
-				className={cn`text-crema mb-0.5 h-[50px] w-full bg-opacity-50 px-6 text-center ${validateError && 'border-2 border-red-300 bg-red-100 text-black'} shadow-none outline-none`}
+				className={cn(
+					'mb-0.5 h-[50px] w-full !border-none !border-white px-6 text-azulRey !shadow-none !outline-none !ring-0 placeholder:text-azulRey',
+					validateError && 'border-2 border-red-300 bg-red-100 text-black'
+				)}
 			/>
 			{validateError && <span className='font-mark text-xs text-red-400'>{validateErrorMessage}</span>}
 		</>
