@@ -22,8 +22,8 @@ const Index = () => {
 			<TownHouse />
 			<Masterplan />
 			<Amenities />
-			<Cotizador />
-			<GMaps />
+			{/* <Cotizador /> */}
+			{/* <GMaps /> */}
 			<Contacto />
 		</>
 	)

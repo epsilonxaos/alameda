@@ -1,5 +1,6 @@
 import { AnimatePresence } from 'framer-motion'
 
+import { Toaster } from 'react-hot-toast'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
 import Loading from './components/Loading'
@@ -18,7 +19,7 @@ export default function App() {
 	return (
 		<>
 			<Header />
-
+			<Toaster />
 			<AnimatePresence mode='wait'>
 				<ScrollToTop />
 

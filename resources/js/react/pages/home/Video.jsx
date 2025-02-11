@@ -13,9 +13,9 @@ const Video = () => {
 						alt=''
 					/>
 					<div className='absolute inset-0 flex items-center justify-center'>
-						<button type='button'>
+						{/* <button type='button'>
 							<Play className='size-9 lg:size-16' />
-						</button>
+						</button> */}
 					</div>
 				</div>
 			</Container>

@@ -7,7 +7,7 @@ const Masterplan = () => {
 	return (
 		<div>
 			<Container className='relative p-0 lg:p-0'>
-				<div className='rounded-sm bg-white p-5 md:absolute md:left-0 md:top-0 md:z-10'>
+				{/* <div className='rounded-sm bg-white p-5 md:absolute md:left-0 md:top-0 md:z-10'>
 					<Text.Title className='mb-4'>Disponibilidad</Text.Title>
 					<ul className='flex items-center justify-center gap-5 md:flex-col md:items-start md:justify-start md:gap-4'>
 						<li className='flex items-center gap-2'>
@@ -20,15 +20,16 @@ const Masterplan = () => {
 							<span className='block size-4 rounded-full bg-red-600' /> <Text className='mb-0'>Vendido</Text>
 						</li>
 					</ul>
-				</div>
+				</div> */}
 
 				<div className='relative w-full'>
 					<img
 						src={IMGMasterplan}
 						alt=''
+						className='w-full'
 					/>
 
-					<SVGMasterplan className='absolute left-0 top-0 z-10 fill-green-600/50 stroke-green-600' />
+					{/* <SVGMasterplan className='absolute left-0 top-0 z-10 fill-green-600/50 stroke-green-600' /> */}
 				</div>
 			</Container>
 		</div>

@@ -10,7 +10,11 @@ const Header = () => {
 					<Logo className='w-[215px] fill-white' />
 				</div>
 
-				<Button.Navigation className='hidden bg-white text-azulRey md:block'>¡cotizar ahora!</Button.Navigation>
+				<Button.Navigation
+					to={'/#contacto'}
+					className='hidden bg-white text-azulRey md:block'>
+					¡cotizar ahora!
+				</Button.Navigation>
 			</Container>
 		</header>
 	)

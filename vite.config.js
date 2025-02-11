@@ -26,6 +26,7 @@ export default defineConfig(({ mode }) => {
 						key: readFileSync(env.SERVER_HTTPS_KEY),
 						cert: readFileSync(env.SERVER_HTTPS_CERT),
 					},
+					cors: true,
 				},
 
 		plugins: [

@@ -10,7 +10,7 @@ const ScrollToTop = () => {
 		setTimeout(() => {
 			window.scrollTo({
 				behavior: element ? 'smooth' : 'auto',
-				top: element ? element.offsetTop - 120 : 0,
+				top: element ? element.offsetTop : 0,
 			})
 		}, 100)
 	}, [location])

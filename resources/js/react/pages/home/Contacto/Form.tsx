@@ -1,77 +1,92 @@
 import Button from '@components/Button'
 import { cn } from '@utils/cn'
 
-import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
 
 const Form = () => {
-	const [name, setName] = useState('')
-	const [email, setEmail] = useState('')
-	const [message, setMessage] = useState('')
-	const [errors, setErrors] = useState({
-		name: '',
-		email: '',
-		message: '',
-	})
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+		reset,
+	} = useForm()
 
-	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault()
-
-		try {
-			setName('')
-			setEmail('')
-			setMessage('')
-		} catch (error) {
-			if (error.response.status === 422) {
-				setErrors(error.response.data.errors)
-			}
-		}
+	const onSubmit = data => {
+		toast.success('Datos enviados correctamente')
+		reset()
 	}
+
+	console.log(errors)
 
 	return (
 		<form
-			onSubmit={handleSubmit}
+			onSubmit={handleSubmit(onSubmit)}
 			className='max-w-[570px]'>
 			<div className='form-group border-t border-t-azulRey/60'>
 				<Input
 					name={'nombre'}
 					placeholder='Nombre'
+					validate={true}
+					register={register}
+					rules={{ required: 'Campo requerido' }}
 				/>
 			</div>
 			<div className='form-group border-t border-t-azulRey/60'>
 				<Input
 					name={'apellido'}
 					placeholder='Apellido'
+					validate={true}
+					register={register}
+					rules={{ required: 'Campo requerido' }}
 				/>
 			</div>
 			<div className='form-group border-t border-t-azulRey/60'>
 				<Input
 					name={'correo'}
 					placeholder='Correo electrónico'
+					validate={true}
+					register={register}
+					rules={{ required: 'Campo requerido', pattern: { value: /^\S+@\S+$/i, message: 'Correo inválido' } }}
 				/>
 			</div>
 			<div className='form-group border-t border-t-azulRey/60'>
 				<Input
 					name={'ciudad'}
 					placeholder='Ciudad'
+					validate={true}
+					register={register}
+					rules={{ required: 'Campo requerido' }}
 				/>
 			</div>
 			<div className='form-group border-y border-y-azulRey/60'>
 				<Input
 					name={'telefono'}
 					placeholder='Teléfono'
+					validate={true}
+					register={register}
+					rules={{
+						required: 'Campo requerido',
+						pattern: { value: /^\d+$/, message: 'Solo números' },
+						minLength: { value: 10, message: 'Mínimo 10 caracteres' },
+					}}
 				/>
 			</div>
 
 			<div className='pt-6 text-center md:pt-14'>
-				<Button className='mx-auto'>agendar videollamada</Button>
+				<Button
+					type='submit'
+					className='mx-auto'>
+					agendar videollamada
+				</Button>
 			</div>
 		</form>
 	)
 }
 
 function Input({
-	name,
-	placeholder,
+	name = '',
+	placeholder = '',
 	register,
 	validate = false,
 	rules,

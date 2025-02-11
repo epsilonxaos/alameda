@@ -1,6 +1,6 @@
 import Container from '@components/Container'
 import Text from '@components/Text'
-import IMGAbout from '@img/img-about.webp'
+import IMGAbout from '@img/img-about.jpg'
 
 const AboutSection = () => {
 	return (

@@ -15,11 +15,11 @@ const Button = ({ children, onClick, type, className }: TButton) => {
 	)
 }
 
-const Url = ({ children, href, className }: TButton & { href: string }) => {
+const Url = ({ children, href, className, isBlank = true }: TButton & { href: string; isBlank?: boolean }) => {
 	return (
 		<a
 			href={href}
-			target='_blank'
+			{...(isBlank && { target: '_blank' })}
 			rel='noopener noreferrer'
 			className={cn('font-apercuPro bg-azulRey px-5 py-4 text-xs uppercase tracking-[1.2px] text-white', className)}>
 			{children}
