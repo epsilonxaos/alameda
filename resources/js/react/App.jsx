@@ -10,6 +10,7 @@ import Footer from './modules/Footer'
 import Header from './modules/Header'
 import PageNotFound from './pages/PageNotFound'
 import Home from './pages/home/Index'
+import Thanks from './pages/thanks/Index'
 
 export default function App() {
 	const location = useLocation()
@@ -18,7 +19,6 @@ export default function App() {
 
 	return (
 		<>
-			<Header />
 			<Toaster />
 			<AnimatePresence mode='wait'>
 				<ScrollToTop />
@@ -30,7 +30,16 @@ export default function App() {
 						index
 						element={
 							<PageTransition>
+								<Header />
 								<Home />
+							</PageTransition>
+						}
+					/>
+					<Route
+						path='/thanks'
+						element={
+							<PageTransition>
+								<Thanks />
 							</PageTransition>
 						}
 					/>

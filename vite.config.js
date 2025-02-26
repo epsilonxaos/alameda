@@ -39,7 +39,7 @@ export default defineConfig(({ mode }) => {
 					'resources/js/panel/index.js',
 					'resources/js/panel/trumbowygInit.js',
 				],
-				refresh: true,
+				refresh: isProduction ? false : true,
 			}),
 			react(),
 			tsconfigPaths(),

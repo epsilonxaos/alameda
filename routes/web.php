@@ -20,6 +20,7 @@ use App\Http\Controllers\LotificationController;
 
 Route::get('/artisan', [ComandosController::class, 'executeComands']);
 Route::view('/', 'layouts.app')->where('path', '.*');
+Route::view('/thanks', 'layouts.app')->where('path', '.*');
 
 Route::get('/dashboard', function () {
 	return view('dashboard');

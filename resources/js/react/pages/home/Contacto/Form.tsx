@@ -1,8 +1,11 @@
 import Button from '@components/Button'
+import ApiRequest, { type ApiRequestOptions } from '@services/ApiRequest'
 import { cn } from '@utils/cn'
 
 import { useForm } from 'react-hook-form'
-import toast from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
+
+const api = new ApiRequest()
 
 const Form = () => {
 	const {
@@ -12,9 +15,28 @@ const Form = () => {
 		reset,
 	} = useForm()
 
+	const navigate = useNavigate()
+
 	const onSubmit = data => {
-		toast.success('Datos enviados correctamente')
-		reset()
+		data.website = 'LandingAlameda'
+
+		const opt: ApiRequestOptions = {
+			url: 'api/enviar-webhook',
+			method: 'POST',
+			data,
+			showToast: {
+				success: 'Datos enviados correctamente',
+				error: 'Error en la solicitud',
+			},
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}
+
+		api.fetchData(opt).then(() => {
+			reset()
+			navigate('/thanks')
+		})
 	}
 
 	console.log(errors)
