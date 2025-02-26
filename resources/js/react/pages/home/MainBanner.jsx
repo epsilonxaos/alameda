@@ -1,5 +1,5 @@
 import { IsotipoCircle } from '@components/Icons'
-import IMGbanner from '@img/main-banner.webp'
+import IMGbanner from '@img/main-banner.jpg'
 
 const MainBanner = () => {
 	return (

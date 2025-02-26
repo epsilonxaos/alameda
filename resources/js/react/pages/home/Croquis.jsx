@@ -1,6 +1,6 @@
 import Container from '@components/Container'
 import Text from '@components/Text'
-import IMG_Croquis from '@img/croquis.png'
+import IMG_Croquis from '@img/croquis.svg'
 
 const Croquis = () => {
 	return (

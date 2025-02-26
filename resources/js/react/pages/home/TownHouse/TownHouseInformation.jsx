@@ -1,12 +1,7 @@
 import Container from '@components/Container'
 import { Check } from '@components/Icons'
 import Text from '@components/Text'
-import IMG_1 from '@img/townhouse/1.webp'
-import IMG_2 from '@img/townhouse/2.webp'
-import IMG_3 from '@img/townhouse/3.webp'
-import IMG_4 from '@img/townhouse/4.webp'
-import IMG_5 from '@img/townhouse/5.webp'
-import IMG_6 from '@img/townhouse/6.webp'
+import IMG_1 from '@img/townhouse/1.jpg'
 
 const ListText = [
 	'Dos plantas con dos recámaras, cada una con baño y clóset.',
@@ -26,7 +21,7 @@ const TownHouseInformation = () => {
 		<div className='bg-verdeLimon/50'>
 			<Container>
 				<div className='grid grid-cols-1 md:grid-cols-2'>
-					<div className='col-span-1 mb-8 border-b border-b-azulMarino md:mb-0 md:border-b-0 md:border-r md:border-r-azulMarino'>
+					<div className='col-span-1 mb-8 flex items-center border-b border-b-azulMarino md:mb-0 md:border-b-0 md:border-r md:border-r-azulMarino'>
 						<div className='mx-auto w-[85%] max-w-[485px] md:ml-0'>
 							<Text.Title className='mx-auto mb-0 max-w-[315px] text-center md:ml-0 md:text-left'>
 								Tu nuevo hogar, Townhouses de Alameda City Homes

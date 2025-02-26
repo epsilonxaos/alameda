@@ -1,16 +1,18 @@
 import Container from '@components/Container'
 import { Logo } from '@components/Icons'
-import ImgBG from '@img/bg-contacto.png'
+import ImgBG from '@img/bg-contacto.jpg'
 import Form from '@pages/home/Contacto/Form'
 
 const Contacto = () => {
 	return (
 		<Container id='contacto'>
 			<div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-				<div className='order-2 col-span-1 md:order-1 md:py-14'>
-					<Logo className='mx-auto mb-[60px] w-[80%] max-w-[290px] fill-azulRey md:mb-[120px]' />
+				<div className='order-2 col-span-1 flex items-center md:order-1 md:py-14'>
+					<div className='w-full'>
+						<Logo className='mx-auto mb-[60px] w-[80%] max-w-[290px] fill-azulRey md:mb-[120px]' />
 
-					<Form />
+						<Form />
+					</div>
 				</div>
 				<div className='order-1 col-span-1 md:order-2'>
 					<img
