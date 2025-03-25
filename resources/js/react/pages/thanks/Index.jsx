@@ -2,7 +2,17 @@ import Button from '@components/Button'
 import Text from '@components/Text'
 import bg from '@img/thanks-bg.jpg'
 
+import { useEffect } from 'react'
+
 const Index = () => {
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			if (window.fbq != null) {
+				window.fbq('track', 'Lead')
+			}
+		}
+	}, [])
+
 	return (
 		<div
 			className='flex h-[calc(100vh-47px)] items-center justify-center bg-cover bg-center text-white'

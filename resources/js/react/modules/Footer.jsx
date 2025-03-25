@@ -11,8 +11,11 @@ const Footer = () => {
 						</a>
 					</li> */}
 					<li>
-						<a href='/'>
-							<p>Diseño y desarrollo por MadebyPartners®</p>
+						<a
+							href='https://madeby.partners/'
+							target='_blank'
+							rel='noreferrer'>
+							<p>Diseño y desarrollo por MADE BY PARTNERS</p>
 						</a>
 					</li>
 					{/* <li>
